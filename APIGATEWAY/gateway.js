@@ -9,12 +9,6 @@ const app = express();
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost/auth_service', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connexion à MongoDB réussie'))
-  .catch(err => console.error('Erreur de connexion à MongoDB', err));
-
-
-
   const axios = require('axios');
 
   app.post('/register', async (req, res) => {
